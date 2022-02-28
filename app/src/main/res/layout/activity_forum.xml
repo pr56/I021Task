@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ForumActivity">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logoutBtn"
+
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="7dp"
+            android:backgroundTint="@color/black"
+
+            app:icon="@drawable/ic_baseline_login_24" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/contactBtn"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="58dp"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/black"
+            app:icon="@drawable/ic_baseline_contact_support_24" />
+
+        <TextView
+            android:id="@+id/Forum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logoutBtn"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center"
+
+            android:text="Student Forum"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/listviewcard"
+            android:layout_width="match_parent"
+            android:layout_height="448dp"
+            android:layout_below="@+id/Forum"
+            android:layout_marginTop="-1dp"
+            android:background="@drawable/bgstudent">
+
+        </ListView>
+
+        <EditText
+            android:id="@+id/messageField"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listviewcard"
+            android:layout_marginStart="5dp"
+            android:background="#15ffffff"
+
+            android:hint="Message"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <Button
+
+            android:id="@+id/messageBtn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listviewcard"
+            android:layout_marginStart="350dp"
+
+            android:background="@drawable/round_button"
+            app:icon="@drawable/ic_baseline_send_24" />
+
+    </RelativeLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
